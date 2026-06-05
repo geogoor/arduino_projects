@@ -19,7 +19,9 @@ Each project lives in its own folder with a bilingual `README.md`, an `.ino` ske
 | [Motion Security System](motion_security_system/) | Alarm with sensor fusion (PIR+HC-SR04), PIN arm/disarm, BT alerts | PIR, HC-SR04, Keypad 4×4, HC-05, LCD |
 | [Sentry Turret](sentry_turret/) | Autonomous turret that scans & locks on a target — radar + auto-targeting | Servo, HC-SR04, PIR, LCD |
 | [IoT Weather Dashboard](iot_weather_dashboard_bluetooth/) | Full IoT stack: sensors → Arduino → HC-05 → native Android app (Kotlin) | HC-05, TMP36, LDR, LCD + Android |
+| [Vault Keypad v1](vault_keypad_v1/) | Insecure predecessor of v2: plaintext PIN, no lockout, press `C` to brute-force it | Keypad 4×4, Servo, LCD |
 | [Vault Keypad v2](vault_keypad_v2/) | Secure lock: hashed PIN, brute-force lockout, duress code, EEPROM | Keypad 4×4, Servo, LCD |
+| [Vault Keypad v3](vault_keypad_v3_bluetooth/) | Secure v2 + Bluetooth & Android app: challenge-response (PIN never sent), lockout applies to BT | Keypad 4×4, HC-05, Servo, LCD + Android |
 | [Flipper Zero DIY](flipper_zero_diy/) | Multi-tool: IR capture/replay + keypad 4×4 navigation | IR RX/TX, Keypad 4×4, LCD |
 
 ### Proof of Concept
@@ -45,7 +47,9 @@ Every project folder has a photo placeholder. To add yours:
 | [Motion Security System](motion_security_system/) | Συναγερμός με sensor fusion (PIR+HC-SR04), PIN arm/disarm, BT alerts | PIR, HC-SR04, Keypad 4×4, HC-05, LCD |
 | [Sentry Turret](sentry_turret/) | Αυτόνομος πύργος που σαρώνει & κλειδώνει σε στόχο — radar + auto-targeting | Servo, HC-SR04, PIR, LCD |
 | [IoT Weather Dashboard](iot_weather_dashboard_bluetooth/) | Πλήρες IoT stack: αισθητήρες → Arduino → HC-05 → native Android app (Kotlin) | HC-05, TMP36, LDR, LCD + Android |
+| [Vault Keypad v1](vault_keypad_v1/) | Ανασφαλής πρόγονος του v2: plaintext PIN, χωρίς lockout, πάτα `C` για brute-force | Keypad 4×4, Servo, LCD |
 | [Vault Keypad v2](vault_keypad_v2/) | Ασφαλής κλειδαριά: hashed PIN, brute-force lockout, duress code, EEPROM | Keypad 4×4, Servo, LCD |
+| [Vault Keypad v3](vault_keypad_v3_bluetooth/) | Ασφαλές v2 + Bluetooth & Android app: challenge-response (το PIN δεν φεύγει ποτέ), lockout και στο BT | Keypad 4×4, HC-05, Servo, LCD + Android |
 | [Flipper Zero DIY](flipper_zero_diy/) | Multi-tool: IR capture/replay + keypad 4×4 navigation | IR RX/TX, Keypad 4×4, LCD |
 
 ### Proof of Concept
