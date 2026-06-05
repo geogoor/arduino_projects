@@ -82,6 +82,14 @@ LCD I2C      SDA -> A4   SCL -> A5
 
 > ⚡ The SG90 can draw enough current on fast moves to reset the Arduino — power the servo from external 5V with a common ground if that happens.
 
+### Build notes: problems we hit (and how we fixed them)
+
+1. **"It won't stay armed."** Right after disarming an alarm (or walking past the sensor), re-arming would instantly re-trigger. Cause: the HC-SR501 **holds its output HIGH for several seconds**, so `armed && motion` was still true the moment I armed. → Added an **8 s exit delay** (`ARM_GRACE`): motion is ignored while the LCD counts down `ARMING 8s…1s`, then it settles to `ARMED - secure`.
+
+2. **LCD stuck on `Climate: COOL!`, never showed ARMED/disarmed.** The second LCD line shows one message at a time by priority, and the **climate check sat above the security status** — so whenever the room was over `TEMP_LIMIT` (28 °C) it hogged the line and you never saw the arm state. → **Reordered the priority** so security messages come first: `ALARM > PIN entry > ARMING > ARMED > Door > Climate > Ready`. The climate warning still shows when idle, and the yellow LED + the `T:..C` reading on line 1 always reflect temperature anyway.
+
+> Tip: the top-right corner of line 1 is the live armed indicator — **`A`** = Armed, **`D`** = Disarmed. And if it always reads hot, either raise `TEMP_LIMIT` or check the TMP36 wiring (a crazy temperature on line 1 = a wiring problem).
+
 ### Future ideas
 
 - HC-05 for remote arm/disarm + push alerts on the phone.
@@ -170,6 +178,14 @@ LCD I2C      SDA -> A4   SCL -> A5
 ```
 
 > ⚡ Ο SG90 σε απότομες κινήσεις τραβάει ρεύμα· αν το Arduino κάνει reset, τροφοδότησε τον servo από εξωτερικά 5V με κοινό GND.
+
+### Σημειώσεις κατασκευής: προβλήματα & πώς λύθηκαν
+
+1. **«Δεν μένει armed».** Αμέσως μετά το αφόπλισμα ενός συναγερμού (ή αφού περνούσα μπροστά από τον αισθητήρα), το ξανα-όπλισμα ξαναχτυπούσε ακαριαία. Αιτία: το HC-SR501 **κρατάει την έξοδό του HIGH για αρκετά δευτερόλεπτα**, οπότε το `armed && motion` ήταν ακόμα αληθές τη στιγμή που όπλιζα. → Πρόσθεσα **exit delay 8s** (`ARM_GRACE`): η κίνηση αγνοείται όσο η LCD μετράει `ARMING 8s…1s`, και μετά σταθεροποιείται σε `ARMED - secure`.
+
+2. **Η LCD κόλλαγε στο `Climate: COOL!`, δεν έδειχνε ποτέ ARMED/disarmed.** Η 2η γραμμή δείχνει ένα μήνυμα τη φορά με προτεραιότητα, και ο **έλεγχος θερμοκρασίας ήταν πάνω από την κατάσταση ασφαλείας** — οπότε όποτε ο χώρος ήταν πάνω από `TEMP_LIMIT` (28 °C), «έτρωγε» τη γραμμή και δεν έβλεπες ποτέ το arm state. → **Άλλαξα τη σειρά προτεραιότητας** ώστε τα μηνύματα ασφαλείας να προηγούνται: `ALARM > PIN entry > ARMING > ARMED > Door > Climate > Ready`. Το climate warning εμφανίζεται όταν είναι σε ηρεμία, και το κίτρινο LED + η ένδειξη `T:..C` στην 1η γραμμή δείχνουν ούτως ή άλλως πάντα τη θερμοκρασία.
+
+> Tip: η πάνω-δεξιά γωνία της 1ης γραμμής είναι ο live δείκτης οπλίσματος — **`A`** = Armed, **`D`** = Disarmed. Κι αν δείχνει συνέχεια ζέστη, είτε ανέβασε το `TEMP_LIMIT` είτε έλεγξε την καλωδίωση του TMP36 (παράλογη θερμοκρασία στην 1η γραμμή = πρόβλημα καλωδίωσης).
 
 ### Ιδέες για το μέλλον
 

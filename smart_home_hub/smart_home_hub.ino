@@ -172,13 +172,13 @@ void loop() {
       for (uint8_t i = 0; i < input.length(); i++) lcd.print('*');
       lcd.print("        ");
     }
-    else if (tempC > TEMP_LIMIT) lcd.print("Climate: COOL!  ");
-    else if (doorOpen)      lcd.print("Door: OPEN      ");
     else if (armed && millis() < armGraceUntil) {        // exit-delay countdown
       int s = (armGraceUntil - millis()) / 1000 + 1;
       lcd.print("ARMING "); lcd.print(s); lcd.print("s        ");
     }
     else if (armed)         lcd.print("ARMED - secure  ");
+    else if (doorOpen)      lcd.print("Door: OPEN      ");
+    else if (tempC > TEMP_LIMIT) lcd.print("Climate: COOL!  ");
     else                    lcd.print("System Ready    ");
   }
 }
