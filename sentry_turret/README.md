@@ -6,6 +6,14 @@
 
 > _Add your build photo here as `sentry_turret.jpg` — Πρόσθεσε τη φωτογραφία της κατασκευής σου ως `sentry_turret.jpg`._
 
+> 📸 **PoC demo notes (visible in the photos):**
+> - The "intruder" target is a **roll of masking tape** — you can see the turret having locked onto it at different angles across the shots.
+> - DIY rig: the **servo is held in place with tape**, and the **PIR sits on a quick makeshift base** aimed at the area (away from the moving arm). Both are visible in the photos — function over finish.
+>
+> 📸 **Σημειώσεις PoC (φαίνονται στις φωτο):**
+> - Ο «στόχος» είναι ένας **ρόλος χαρτοταινίας** — φαίνεται ο πύργος να έχει κλειδώσει πάνω του σε διαφορετικές θέσεις σε κάθε λήψη.
+> - Πρόχειρες πατέντες: το **servo στερεώθηκε με ταινία**, και το **PIR κάθεται σε αυτοσχέδια βάση** στραμμένο στον χώρο (μακριά από τον κινούμενο βραχίονα). Και τα δύο φαίνονται στις φωτο — λειτουργία πάνω από αισθητική.
+
 📄 **Code / Κώδικας:** [`sentry_turret.ino`](sentry_turret.ino)
 
 ---
