@@ -2,11 +2,14 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![Flipper Zero DIY](flipper_zero_diy.jpg)
-
-> _Add your build photo here as `flipper_zero_diy.jpg` — Πρόσθεσε τη φωτογραφία της κατασκευής σου ως `flipper_zero_diy.jpg`._
+> **📐 Design & reference — NOT a built PoC.**
+> This project is documented as a design/architecture reference. It was **not** physically built, because it needs parts I don't have: an **IR LED** (transmitter, for replay) + 100Ω, and the optional **RC522 (RFID)**, **CC1101/HC-12 (Sub-GHz)** and an **Arduino Leonardo (BadUSB)**. The code and wiring are complete and correct — only the build/photo is pending until the parts are available.
+>
+> **📐 Σχεδίαση & αναφορά — ΟΧΙ built PoC.** Τεκμηριωμένο ως σχεδίαση/αρχιτεκτονική. **Δεν** χτίστηκε, γιατί θέλει εξαρτήματα που δεν έχω: **IR LED** (πομπό, για replay) + 100Ω, και προαιρετικά **RC522 (RFID)**, **CC1101/HC-12 (Sub-GHz)** και **Arduino Leonardo (BadUSB)**. Ο κώδικας & η συνδεσμολογία είναι πλήρη και σωστά — εκκρεμεί μόνο το χτίσιμο/φωτο μέχρι να υπάρξουν τα εξαρτήματα.
 
 📄 **Code / Κώδικας:** [`flipper_zero_diy.ino`](flipper_zero_diy.ino)
+
+> 📸 **Proof of Concept:** N/A — concept/design only (δεν χτίστηκε).
 
 > ⚠️ For educational use / authorized testing only.
 
