@@ -55,7 +55,10 @@ bool doorOpen = false;
 unsigned long lightUntil = 0;      // millis() deadline for the auto-light
 unsigned long lastLCD = 0;
 unsigned long lastBeep = 0;
+unsigned long armGraceUntil = 0;   // exit delay: ignore motion right after arming
 bool beepState = false;
+
+const unsigned long ARM_GRACE = 8000;  // 8 s exit delay
 
 void shortBeep() { tone(BUZZER, 1800, 80); }
 
@@ -100,6 +103,7 @@ void handleKey(char k) {
       alarmActive = false;                  // disarming also clears the alarm
       noTone(BUZZER);
       digitalWrite(LED_ALARM, LOW);
+      if (armed) armGraceUntil = millis() + ARM_GRACE;  // ignore lingering motion
       tone(BUZZER, armed ? 2000 : 1000, 200);
     } else {
       tone(BUZZER, 400, 400);               // wrong PIN
@@ -123,7 +127,7 @@ void loop() {
   float tempC = (volts - 0.5) * 100.0;
 
   // ----- 3. SECURITY -----
-  if (armed && motion) alarmActive = true;
+  if (armed && motion && millis() >= armGraceUntil) alarmActive = true;
 
   if (alarmActive) {
     // alternating buzzer + flashing red (non-blocking)
@@ -170,6 +174,10 @@ void loop() {
     }
     else if (tempC > TEMP_LIMIT) lcd.print("Climate: COOL!  ");
     else if (doorOpen)      lcd.print("Door: OPEN      ");
+    else if (armed && millis() < armGraceUntil) {        // exit-delay countdown
+      int s = (armGraceUntil - millis()) / 1000 + 1;
+      lcd.print("ARMING "); lcd.print(s); lcd.print("s        ");
+    }
     else if (armed)         lcd.print("ARMED - secure  ");
     else                    lcd.print("System Ready    ");
   }
