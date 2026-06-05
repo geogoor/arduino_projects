@@ -6,6 +6,21 @@
 
 > _Add your build photo here as `iot_weather_dashboard_bluetooth.jpg` — Πρόσθεσε τη φωτογραφία της κατασκευής σου ως `iot_weather_dashboard_bluetooth.jpg`._
 
+### 📸 Proof of Concept — notes on the photos
+
+The photos capture **different phases of operation**, not just a static build:
+
+- **Sensor manipulation:** covering the LDR with a finger/hand to **simulate night** — you can see the condition flip to `DARK`/`NIGHT` and the light % drop, both on the LCD and live on the phone.
+- **LCD screens:** the on-board button (SW1) cycles the display, so the photos show the **4 different LCD pages** — `Temp °C/°F`, `Light % + condition`, `Max/Min`, `Uptime + BT Active`.
+- **App ↔ hardware in sync:** shots showing the phone dashboard mirroring the same readings as the LCD at that moment (proves the live Bluetooth link).
+- **Alert state:** (optional) warming the TMP36 to push temperature high enough to trigger the red **alert card** on the app + the red LED/buzzer.
+
+> _Οι φωτογραφίες δείχνουν **διαφορετικές φάσεις λειτουργίας**, όχι απλώς στατική κατασκευή:_
+> - _**Χειρισμός αισθητήρα:** κρύβω τον LDR με το χέρι για να **προσομοιώσω νύχτα** — φαίνεται η κατάσταση να γίνεται `DARK`/`NIGHT` και το φως % να πέφτει, και στην LCD και ζωντανά στο κινητό._
+> - _**Οθόνες LCD:** το κουμπί SW1 αλλάζει σελίδα, οπότε στις φωτο φαίνονται οι **4 διαφορετικές οθόνες** — `Temp °C/°F`, `Light % + κατάσταση`, `Max/Min`, `Uptime + BT Active`._
+> - _**App ↔ hardware συγχρονισμένα:** λήψεις όπου ο πίνακας στο κινητό δείχνει τις ίδιες μετρήσεις με την LCD τη συγκεκριμένη στιγμή (αποδεικνύει τη ζωντανή σύνδεση Bluetooth)._
+> - _**Κατάσταση alert:** (προαιρετικά) ζεσταίνοντας το TMP36 ώστε να ανέβει η θερμοκρασία και να ενεργοποιηθεί η κόκκινη **κάρτα alert** στην app + το κόκκινο LED/buzzer._
+
 📄 **Arduino code:** [`iot_weather_dashboard_bluetooth.ino`](iot_weather_dashboard_bluetooth.ino)
 📱 **Android app:** [`android/MainActivity.kt`](android/MainActivity.kt) · [`android/activity_main.xml`](android/activity_main.xml)
 
@@ -73,6 +88,8 @@ Button 2 (reset min/max) -> pin 3 -> GND (INPUT_PULLUP)
 
 > The HC-05 RX is 3.3V logic — keep the 1kΩ/2kΩ divider so the 5V TX from the Arduino does not damage it.
 
+> **Build note (improvisation):** I had run out of resistors for the **green LED**, so I improvised with a **10kΩ potentiometer** wired in series as a variable current limiter — turned up enough to protect the LED while keeping it visible. A fixed 220Ω is the proper part; the pot just got the build working with what I had on hand.
+
 ### Android app setup
 
 1. **Android Studio → New Project → Empty Views Activity**, language **Kotlin**, package `com.weather.dashboard`, min SDK **21**.
@@ -89,6 +106,18 @@ Button 2 (reset min/max) -> pin 3 -> GND (INPUT_PULLUP)
    ```
 4. Replace `MainActivity.kt` and `res/layout/activity_main.xml` with the files in [`android/`](android/).
 5. **Pair** the HC-05 from Android Settings (PIN `1234` or `0000`), run the app, tap **Connect**, pick the device.
+
+### How to use it
+
+1. **Power the Arduino.** The LCD shows `IoT Weather / Starting...`, then live readings. The Bluetooth module starts blinking fast (not yet connected).
+2. **Pair once** (first time only): phone **Settings → Bluetooth → HC-05 → Pair**, PIN `1234`/`0000`.
+3. **Open the app**, grant the Bluetooth/Location permissions, tap **Connect** and pick the paired module. Status turns **Connected** and the dashboard fills in within ~2 s (data arrives every 2 s).
+4. **Read the dashboard:** temperature °C/°F, light %, condition (NIGHT → SUNNY), max/min, uptime. The **alert card** pops up automatically — red when `≥ 35 °C`, blue when `≤ 5 °C`.
+5. **On-board buttons** (on the hardware, not the app):
+   - **SW1 (pin 2):** cycle the LCD screen — Temp → Light → Max/Min → Uptime.
+   - **SW2 (pin 3):** reset the max/min record.
+6. **Quick live test:** touch the TMP36 with a finger → temperature climbs on the phone. Cover the LDR → light % drops and the condition turns DARK/NIGHT.
+7. **Disconnect:** tap the button again (now **Disconnect**) or close the app — the socket closes itself (`onDestroy`).
 
 ### Troubleshooting
 
@@ -163,6 +192,8 @@ Buzzer + -> pin 8
 
 > Το RX του HC-05 είναι λογική 3.3V — κράτα τον διαιρέτη 1kΩ/2kΩ ώστε τα 5V του Arduino να μην το καταστρέψουν.
 
+> **Σημείωση κατασκευής (αυτοσχεδιασμός):** Δεν είχα άλλη αντίσταση για το **πράσινο LED**, οπότε αυτοσχεδίασα με ένα **ποτενσιόμετρο 10kΩ** συνδεδεμένο σε σειρά ως μεταβλητός περιοριστής ρεύματος — το ανέβασα όσο χρειαζόταν για να προστατεύεται το LED αλλά να παραμένει ορατό. Το σωστό εξάρτημα είναι μια σταθερή 220Ω· το ποτενσιόμετρο απλά έκανε την κατασκευή να δουλέψει με ό,τι είχα διαθέσιμο.
+
 ### Setup της Android app
 
 1. **Android Studio → New Project → Empty Views Activity**, γλώσσα **Kotlin**, package `com.weather.dashboard`, min SDK **21**.
@@ -179,6 +210,18 @@ Buzzer + -> pin 8
    ```
 4. Αντικατέστησε τα `MainActivity.kt` και `res/layout/activity_main.xml` με τα αρχεία στο [`android/`](android/).
 5. **Pair** το HC-05 από Android Settings (PIN `1234` ή `0000`), τρέξε την app, πάτα **Connect**, διάλεξε το device.
+
+### Οδηγίες χρήσης
+
+1. **Τροφοδότησε το Arduino.** Η LCD δείχνει `IoT Weather / Starting...` και μετά ζωντανές μετρήσεις. Το module Bluetooth αναβοσβήνει γρήγορα (αζευγάρωτο ακόμα).
+2. **Pair μία φορά** (μόνο την πρώτη): κινητό **Settings → Bluetooth → HC-05 → Pair**, PIN `1234`/`0000`.
+3. **Άνοιξε την εφαρμογή**, δώσε τα permissions Bluetooth/Location, πάτα **Connect** και διάλεξε το ζευγαρωμένο module. Το status γίνεται **Connected** και ο πίνακας γεμίζει σε ~2 δευτ. (τα δεδομένα έρχονται κάθε 2 δευτ.).
+4. **Διάβασε τον πίνακα:** θερμοκρασία °C/°F, φως %, κατάσταση (NIGHT → SUNNY), max/min, uptime. Η **κάρτα alert** εμφανίζεται αυτόματα — κόκκινη όταν `≥ 35 °C`, μπλε όταν `≤ 5 °C`.
+5. **Κουμπιά πάνω στο κύκλωμα** (στο hardware, όχι στην app):
+   - **SW1 (pin 2):** αλλάζει οθόνη στην LCD — Temp → Light → Max/Min → Uptime.
+   - **SW2 (pin 3):** reset των max/min.
+6. **Γρήγορο live test:** άγγιξε το TMP36 με το δάχτυλο → η θερμοκρασία ανεβαίνει στο κινητό. Κάλυψε το LDR → το φως % πέφτει και η κατάσταση γίνεται DARK/NIGHT.
+7. **Αποσύνδεση:** ξαναπάτα το κουμπί (γίνεται **Disconnect**) ή κλείσε την app — το socket κλείνει μόνο του (`onDestroy`).
 
 ### Troubleshooting
 
