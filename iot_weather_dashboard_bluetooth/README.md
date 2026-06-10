@@ -2,7 +2,7 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![IoT Weather Dashboard](photos/1000027479.jpg)
+![IoT Weather Dashboard](photos/1000027481.jpg)
 
 
 ### 📸 Proof of Concept — notes on the photos
