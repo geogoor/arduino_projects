@@ -179,6 +179,9 @@ Do this **once** the circuit is built and powered. Bluetooth pairing happens in 
 
 > 💡 **Real-build gotcha (what actually went wrong here):** the phone wasn't updating at all — unlocking on the keypad didn't turn the app card green, and the app's OPEN did nothing. Both point to the **Arduino → phone (TX) line being dead**. The cause was a **wrong resistor in the divider: a 10kΩ used by mistake instead of the 1kΩ** (they look alike!). That left the HC-05 RXD at only **0.44V** — far below the ~2.3V it needs to read a logic "1", so the lock's replies never reached the module. **Fix:** correct the divider so RXD measures roughly **2.5–3.3V** (≈2.7V works perfectly). Always check RXD→GND with a multimeter after wiring.
 
+![Probing the divider voltage with a multimeter](photos/IMG_20260605_025103.jpg)
+> _Tracking down the dead TX line — measuring the HC-05 RXD voltage with the multimeter._
+
 ### Try it yourself
 
 1. Upload the sketch (default PIN `1234`, stored as a hash in EEPROM).
@@ -355,6 +358,9 @@ HC-05 TXD  ->  Arduino pin 10     (απευθείας, χωρίς αντίστα
 | App ανοίγει αλλά το "Connect" δεν κάνει τίποτα | άρνηση άδειας BT | Ρυθμίσεις → Εφαρμογές → Vault Keypad → Άδειες → επίτρεψε Κοντινές συσκευές |
 
 > 💡 **Πραγματικό πρόβλημα της κατασκευής (τι έφταιγε εδώ):** το κινητό δεν ενημερωνόταν καθόλου — ξεκλείδωμα από το keypad δεν έκανε πράσινη την κάρτα της app, και το OPEN της app δεν έκανε τίποτα. Και τα δύο δείχνουν ότι η **γραμμή Arduino → κινητό (TX) ήταν νεκρή**. Η αιτία: **λάθος αντίσταση στον διαιρέτη — μπήκε 10kΩ αντί για 1kΩ** (μοιάζουν!). Αυτό άφηνε το RXD του HC-05 μόλις στα **0.44V** — πολύ κάτω από τα ~2.3V που χρειάζεται για να διαβάσει λογικό "1", οπότε οι απαντήσεις της κλειδαριάς δεν έφταναν ποτέ στο module. **Λύση:** διόρθωσε τον διαιρέτη ώστε το RXD να μετράει περίπου **2.5–3.3V** (≈2.7V δουλεύει μια χαρά). Πάντα έλεγχε RXD→GND με πολύμετρο μετά τη συνδεσμολογία.
+
+![Μέτρηση τάσης του divider με πολύμετρο](photos/IMG_20260605_025103.jpg)
+> _Ψάχνοντας τη νεκρή γραμμή TX — μετρώντας την τάση στο RXD του HC-05 με το πολύμετρο._
 
 ### Δοκίμασέ το
 
