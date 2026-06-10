@@ -26,10 +26,7 @@ Each project lives in its own folder with a bilingual `README.md`, an `.ino` ske
 
 ### Proof of Concept
 
-Every project folder has a photo placeholder. To add yours:
-1. Build the circuit and take a clear photo.
-2. Save it inside the project folder as `<project_name>.jpg` (e.g. `parking_sensor/parking_sensor.jpg`).
-3. It shows up automatically in that project's README.
+Each built project has real build photos in its own `photos/` folder, shown at the top of the project's README. The circuits were wired on a breadboard and tested on real hardware.
 
 > ⚠️ The security-related projects are **for educational use and authorized security testing only**.
 
@@ -54,9 +51,6 @@ Every project folder has a photo placeholder. To add yours:
 
 ### Proof of Concept
 
-Κάθε φάκελος project έχει placeholder για φωτο. Για να βάλεις τη δική σου:
-1. Στήσε το κύκλωμα και βγάλε καθαρή φωτογραφία.
-2. Αποθήκευσέ τη μέσα στον φάκελο του project ως `<όνομα_project>.jpg` (π.χ. `parking_sensor/parking_sensor.jpg`).
-3. Εμφανίζεται αυτόματα στο README του project.
+Κάθε ολοκληρωμένο project έχει πραγματικές φωτογραφίες κατασκευής στον δικό του φάκελο `photos/`, που εμφανίζονται στην κορυφή του README του. Τα κυκλώματα στήθηκαν σε breadboard και δοκιμάστηκαν σε πραγματικό hardware.
 
 > ⚠️ Τα security-related projects είναι **αποκλειστικά για εκπαιδευτικούς σκοπούς και authorized security testing**.
