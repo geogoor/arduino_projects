@@ -2,7 +2,7 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![Sentry Turret](photos/1000027435.jpg)
+![Sentry Turret](photos/1000027442.jpg)
 
 
 > 📸 **PoC demo notes (visible in the photos):**
