@@ -2,9 +2,9 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![Vault Keypad v3](vault_keypad_v3_bluetooth.jpg)
+![Vault Keypad v3](photos/1000027419.jpg)
 
-> _Add your build photo here as `vault_keypad_v3_bluetooth.jpg` — Πρόσθεσε τη φωτογραφία της κατασκευής σου ως `vault_keypad_v3_bluetooth.jpg`._
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
 
 📄 **Arduino code:** [`vault_keypad_v3_bluetooth.ino`](vault_keypad_v3_bluetooth.ino)
 📱 **Android app:** [`android/MainActivity.kt`](android/MainActivity.kt) · [`android/activity_main.xml`](android/activity_main.xml)

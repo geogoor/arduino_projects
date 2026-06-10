@@ -2,9 +2,9 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![Smart Home Hub](smart_home_hub.jpg)
+![Smart Home Hub](photos/1000027463.jpg)
 
-> _Add your build photo here as `smart_home_hub.jpg` — Πρόσθεσε τη φωτογραφία της κατασκευής σου ως `smart_home_hub.jpg`._
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
 
 📄 **Code / Κώδικας:** [`smart_home_hub.ino`](smart_home_hub.ino)
 

@@ -2,9 +2,8 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![Sentry Turret](sentry_turret.jpg)
+![Sentry Turret](photos/1000027435.jpg)
 
-> _Add your build photo here as `sentry_turret.jpg` — Πρόσθεσε τη φωτογραφία της κατασκευής σου ως `sentry_turret.jpg`._
 
 > 📸 **PoC demo notes (visible in the photos):**
 > - The "intruder" target is a **roll of masking tape** — you can see the turret having locked onto it at different angles across the shots.

@@ -2,9 +2,8 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![IoT Weather Dashboard](iot_weather_dashboard_bluetooth.jpg)
+![IoT Weather Dashboard](photos/1000027479.jpg)
 
-> _Add your build photo here as `iot_weather_dashboard_bluetooth.jpg` — Πρόσθεσε τη φωτογραφία της κατασκευής σου ως `iot_weather_dashboard_bluetooth.jpg`._
 
 ### 📸 Proof of Concept — notes on the photos
 

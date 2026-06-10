@@ -2,9 +2,9 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![Weather Dashboard](weather_dashboard.jpg)
+![Weather Dashboard](photos/1000027372.jpg)
 
-> _Add your build photo here as `weather_dashboard.jpg` — Πρόσθεσε τη φωτογραφία της κατασκευής σου ως `weather_dashboard.jpg`._
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
 
 📄 **Code / Κώδικας:** [`weather_dashboard.ino`](weather_dashboard.ino)
 

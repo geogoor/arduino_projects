@@ -2,9 +2,9 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![Vault Keypad v1](vault_keypad_v1.jpg)
+![Vault Keypad v1](photos/1000027403.jpg)
 
-> _Add your build photo here as `vault_keypad_v1.jpg` — Πρόσθεσε τη φωτογραφία της κατασκευής σου ως `vault_keypad_v1.jpg`._
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
 
 📄 **Code / Κώδικας:** [`vault_keypad_v1.ino`](vault_keypad_v1.ino)
 

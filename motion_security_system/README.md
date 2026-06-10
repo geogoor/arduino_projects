@@ -2,7 +2,7 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![Motion Security System](motion_security_system.jpg)
+![Motion Security System](photos/1000027510.jpg)
 
 > 📸 **Proof of Concept:** the photos show the full alarm sequence on real hardware **plus the dedicated phone app** reacting live. As the "intruder" I used a **roll of masking tape** moved into the sensors' field — you can see it in the shots triggering the ENTRY/INTRUSION states while the app card turns orange then red.
 >

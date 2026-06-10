@@ -2,9 +2,9 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![Parking Sensor](parking_sensor.jpg)
+![Parking Sensor](photos/1000027379.jpg)
 
-> _Add your build photo here as `parking_sensor.jpg` — Πρόσθεσε τη φωτογραφία της κατασκευής σου ως `parking_sensor.jpg`._
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
 
 📄 **Code / Κώδικας:** [`parking_sensor.ino`](parking_sensor.ino)
 
