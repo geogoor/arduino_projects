@@ -1,4 +1,4 @@
-# 🛠️ Arduino Projects
+#  Arduino Projects
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
