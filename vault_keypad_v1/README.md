@@ -4,7 +4,7 @@
 
 ![Vault Keypad v1](photos/1000027403.jpg)
 
-> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** στις φωτό ([`photos/`](photos)) το servo-κλειδαριά είναι στημένο πάνω σε χαρτί με σημειωμένες τις θέσεις `LOCKED`/`OPEN`, η LCD ζητάει PIN και το 4×4 keypad κάνει είσοδο — η ανασφαλής έκδοση που σπάει πατώντας `C`. The servo lock is mounted on paper with hand-marked `LOCKED`/`OPEN` positions; LCD prompts for the PIN — this is the insecure version you crack by pressing `C`.
 
 📄 **Code / Κώδικας:** [`vault_keypad_v1.ino`](vault_keypad_v1.ino)
 

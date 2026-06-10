@@ -4,7 +4,7 @@
 
 ![Vault Keypad v2](photos/1000027389.jpg)
 
-> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** στις φωτό ([`photos/`](photos)) η ασφαλής έκδοση στημένη — το πράσινο LED ανάβει μετά από σωστό PIN (ξεκλείδωτο), με το πολύμετρο δίπλα καθώς έλεγχα το κύκλωμα. The secure build wired up — green LED on after a correct PIN (unlocked), with the multimeter alongside while checking the circuit.
 
 📄 **Code / Κώδικας:** [`vault_keypad_v2.ino`](vault_keypad_v2.ino)
 

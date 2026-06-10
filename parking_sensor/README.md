@@ -4,7 +4,7 @@
 
 ![Parking Sensor](photos/1000027379.jpg)
 
-> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** στις φωτό ([`photos/`](photos)) δουλεύει live — η LCD γράφει `Stop@:21cm IR:N` (αντικείμενο μέσα στο όριο, κόκκινο LED + buzzer ενεργά), ενώ σε μεγαλύτερη απόσταση ανάβει το πράσινο. The LCD reads `Stop@:21cm` with the object inside the threshold (red LED + buzzer on); green LED lights when the path is clear.
 
 📄 **Code / Κώδικας:** [`parking_sensor.ino`](parking_sensor.ino)
 

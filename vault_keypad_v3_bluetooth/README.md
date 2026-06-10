@@ -4,7 +4,7 @@
 
 ![Vault Keypad v3](photos/1000027419.jpg)
 
-> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** στις φωτό ([`photos/`](photos)) η ίδια κλειδαριά με το μπλε **HC-05** module προστιθέμενο (αριστερά) — keypad + Bluetooth μαζί. Δες και τη φωτό με το **πολύμετρο** πιο κάτω, από το debugging του voltage divider. The same lock with the blue **HC-05** module wired in — keypad + Bluetooth together. See also the **multimeter** photo further down, from the voltage-divider debugging.
 
 📄 **Arduino code:** [`vault_keypad_v3_bluetooth.ino`](vault_keypad_v3_bluetooth.ino)
 📱 **Android app:** [`android/MainActivity.kt`](android/MainActivity.kt) · [`android/activity_main.xml`](android/activity_main.xml)

@@ -4,7 +4,7 @@
 
 ![Smart Home Hub](photos/1000027463.jpg)
 
-> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** στις φωτό ([`photos/`](photos)) η LCD δείχνει κλίμα `T:29C L:39%` και κατάσταση `D` (disarmed), ενώ πληκτρολογείται PIN (`****`) στο 4×4 keypad για τον συναγερμό. The LCD shows climate (`T:29C L:39%`) and state `D`, while a PIN (`****`) is being typed on the 4×4 keypad to arm/disarm.
 
 📄 **Code / Κώδικας:** [`smart_home_hub.ino`](smart_home_hub.ino)
 

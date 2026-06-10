@@ -4,7 +4,7 @@
 
 ![Weather Dashboard](photos/1000027372.jpg)
 
-> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** οι φωτογραφίες στον φάκελο [`photos/`](photos) δείχνουν την πραγματική κατασκευή στημένη στο breadboard και σε λειτουργία. · The photos in [`photos/`](photos) show the real build wired up and running.
+> 📸 **Proof of Concept / Απόδειξη λειτουργίας:** στις φωτό ([`photos/`](photos)) η LCD δείχνει `T:28.2 ↓ 30` (θερμοκρασία με βελάκι τάσης + max) και `L:56%` με bar graph· τα 3 LED ανάβουν ανάλογα με τη φωτεινότητα. The LCD shows temperature with a trend arrow ↓ and max, plus a light bar graph; the 3-LED bar tracks brightness.
 
 📄 **Code / Κώδικας:** [`weather_dashboard.ino`](weather_dashboard.ino)
 
