@@ -2,7 +2,7 @@
 
 **🇬🇧 [English](#english) · 🇬🇷 [Ελληνικά](#ελληνικά)**
 
-![Parking Sensor](photos/1000027379.jpg)
+![Parking Sensor](photos/1000027380.jpg)
 
 > 📸 **Proof of Concept / Απόδειξη λειτουργίας:** στις φωτό ([`photos/`](photos)) δουλεύει live — η LCD γράφει `Stop@:21cm IR:N` (αντικείμενο μέσα στο όριο, κόκκινο LED + buzzer ενεργά), ενώ σε μεγαλύτερη απόσταση ανάβει το πράσινο. The LCD reads `Stop@:21cm` with the object inside the threshold (red LED + buzzer on); green LED lights when the path is clear.
 
